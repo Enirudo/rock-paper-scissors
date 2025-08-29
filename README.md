@@ -1,0 +1,1 @@
+The Odin Project Rock Paper Scissors project of JavaScript Foundations module. This game will be played entirely in the console.
