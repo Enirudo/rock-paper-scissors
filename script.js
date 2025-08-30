@@ -1,21 +1,54 @@
 function getComputerChoice () {
     let numRandom = Math.random();
+
     if (numRandom < 0.3) {
-        console.log("Scissors");
+        return "Scissors";
     } else if (numRandom > 0.6) {
-            console.log("Paper");
+            return "Paper";
         } else {
-            console.log("Rock");
+            return "Rock";
         }
 }
 
 function getHumanChoice () {
     let userChoice = prompt("Pick between Rock, Paper or Scissors: ");
-    console.log(userChoice);
+    return userChoice;
+}
+
+function playRound (computerChoice,humanChoice) {
+    stringComputer = computerChoice.tolowercase();
+    stringUser = humanChoice.tolowercase();
+//Check for rock versus rock, paper and scissors combination
+    if (stringComputer == "" || stringUser == "") {
+        return "";
+    } else if (stringComputer == "" || stringUser == "") {
+        return "";
+    } else {
+        return "";
+    }
+//Check for paper versus rock, paper and scissors combination
+
+    if (stringComputer == "" || stringUser == "") {
+        return "";
+    } else if (stringComputer == "" || stringUser == "") {
+        return "";
+    } else {
+        return "";
+    }
+//Check for scissors versus rock, paper and scissors combination
+
+    if (stringComputer == "" || stringUser == "") {
+        return "";
+    } else if (stringComputer == "" || stringUser == "") {
+        return "";
+    } else {
+        return "";
+    }
+
 }
 
 let computerScore = 0;
 let humanScore = 0;
 
-getComputerChoice();
-getHumanChoice();
+const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
