@@ -28,10 +28,12 @@ function playRound (computerChoice,humanChoice) {
 //Check for rock versus rock, paper and scissors combination
     if (stringComputer == "rock" && stringUser == "paper") {
         console.log("You win! Paper beats rock.");
+        humanScore++;
     }
     
     if (stringComputer == "rock" && stringUser == "scissors") {
         console.log("You lose! Rock beats scissors.");
+        computerScore++;
     }
 
     if (stringComputer == "rock" && stringUser == "rock") {
@@ -42,10 +44,12 @@ function playRound (computerChoice,humanChoice) {
 
     if (stringComputer == "paper" && stringUser == "rock") {
         console.log("You lose! Paper beats rock.");
+        computerScore++;
     }
     
     if (stringComputer == "paper" && stringUser == "scissors") {
-        console.log("You lose! Scissors beats paper.");
+        console.log("You win! Scissors beats paper.");
+        humanScore++;
     }
 
     if (stringComputer == "paper" && stringUser == "paper") {
@@ -55,10 +59,12 @@ function playRound (computerChoice,humanChoice) {
 
     if (stringComputer == "scissors" && stringUser == "paper") {
         console.log("You lose! Scissors beats paper.");
+        computerScore++;
     }
     
     if (stringComputer == "scissors" && stringUser == "rock") {
-        console.log("You lose! Rock beats scissors.");
+        console.log("You win! Rock beats scissors.");
+        humanScore++
     }
 
     if (stringComputer == "scissors" && stringUser == "scissors") {
@@ -70,6 +76,11 @@ function playRound (computerChoice,humanChoice) {
 let computerScore = 0;
 let humanScore = 0;
 
-const computerSelection = getComputerChoice();
-const humanSelection = getHumanChoice();
-playRound(computerSelection, humanSelection);
+for (let i = 0; i < 5; i++) {
+    const computerSelection = getComputerChoice();
+    const humanSelection = getHumanChoice();
+    playRound(computerSelection, humanSelection);
+}
+
+console.log(computerScore);
+console.log(humanScore);
